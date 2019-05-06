@@ -73,6 +73,7 @@ class ExpressCheckout
                 'L_PAYMENTREQUEST_0_NAME'.$num => $item['name'],
                 'L_PAYMENTREQUEST_0_AMT'.$num  => $item['price'],
                 'L_PAYMENTREQUEST_0_QTY'.$num  => isset($item['qty']) ? $item['qty'] : 1,
+                'L_PAYMENTREQUEST_0_DESC'.$num  => isset($item['desc']) ? $item['desc'] : null,
             ];
         })->flatMap(function ($value) {
             return $value;
